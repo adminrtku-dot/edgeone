@@ -2,40 +2,22 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Kas Warga</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #f3f4f6;
-        }
-        /* Kontainer untuk menyembunyikan banner Google */
-        .iframe-container {
-            position: absolute;
-            /* Kita menggeser posisi iframe ke atas untuk menyembunyikan banner Google */
-            top: -45px; 
-            left: 0;
-            width: 100%;
-            /* Tinggi dilebihkan agar bagian bawah tidak terpotong */
-            height: calc(100% + 45px); 
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <title>Web App Ku</title>
 </head>
 <body>
+    <h1>Data dari Google Apps Script:</h1>
+    <div id="hasil">Loading...</div>
 
-    <div class="iframe-container">
-        <!-- Ganti URL di bawah ini dengan URL Deployment Aplikasi Web GAS Anda -->
-        <iframe src="https://script.google.com/macros/s/AKfycby7aPfuTW8KJ7P5uL1vS1QQrnLGQtQVua60zlku8i0qlkNOQJ9aWZg-j4kCrFUuFfHD/exec"></iframe>
-    </div>
+    <script>
+        // Ganti dengan Web App URL yang kamu salin dari GAS
+        const gasUrl = 'https://script.google.com/macros/s/AKfycbz9EG_YAYmepSxvA5vT8PPqEXqFxhZc7rX_Kav8h5FAcV2OKphQwttXs8qB5rSKmz6R5A/exec';
 
+        fetch(gasUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('hasil').innerText = data.message;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
 </body>
 </html>

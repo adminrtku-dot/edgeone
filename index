@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Web App Ku</title>
-</head>
-<body>
-    <h1>Data dari Google Apps Script:</h1>
-    <div id="hasil">Loading...</div>
+
+    <div style="overflow: hidden; height: 100vh; width: 100vw;">
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbwGvzx0PFSGWADEQ0ElhYp4R9Od_lOskMPkjCnumISQq0W8M2roa7DC_GDXlj_nBlj0/exec" 
+        style="border: 0; width: 100%; height: calc(100vh + 28px); margin-top: -28px;">
+    </iframe>
+</div>
+
+
+<div id="hasil">Loading...</div>
 
     <script>
         // Ganti dengan Web App URL yang kamu salin dari GAS
@@ -21,3 +24,4 @@
     </script>
 </body>
 </html>
+

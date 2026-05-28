@@ -10,7 +10,7 @@
 
     <script>
         // Ganti dengan Web App URL yang kamu salin dari GAS
-        const gasUrl = 'https://script.google.com/macros/s/AKfycbz9EG_YAYmepSxvA5vT8PPqEXqFxhZc7rX_Kav8h5FAcV2OKphQwttXs8qB5rSKmz6R5A/exec';
+        const gasUrl = 'https://script.google.com/macros/s/AKfycbwGvzx0PFSGWADEQ0ElhYp4R9Od_lOskMPkjCnumISQq0W8M2roa7DC_GDXlj_nBlj0/exec';
 
         fetch(gasUrl)
             .then(response => response.json())
